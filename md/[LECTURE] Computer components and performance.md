@@ -42,5 +42,39 @@ Another case, we can add more CPUs. In this case, throughput improved because in
 
 
 
-### R
+### CPU Clocking
+
+As mentioned above, computer users we need to care about time ($t_{resp}$) but we need new unit convenient to think about performance in other metrics. Almost all computers are constructed using a clock that determines when events take place in the hardware. These discrete time intervals are called **clock cycles** (or *ticks, clock ticks, clock periods, clocks, cycles*). (Designers refer to the length of a clock period both as the time for a complete clock cycle (e.g., 250$ps$) and as the clock rate (e.g., 4 $GHz$), which is the inverse of the clock period)
+
+![image-20210425003519008](C:\Users\nghmi\AppData\Roaming\Typora\typora-user-images\image-20210425003519008.png)
+
+### CPU Time
+
+
+
+### Instruction count and CPI
+
+
+
+### Iron Law
+
+
+
+### Other metrics
+
+#### MIPS
+
+#### MFLOPS
+
+
+
+### Amdahl's Law
+
+
+
+### Power
+
+
+
+
 

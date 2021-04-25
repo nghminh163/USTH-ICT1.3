@@ -1,14 +1,12 @@
 # Computer components and performance
 
-## Recall
-
-### Response time and throughput
+## Response time and throughpu
 
 If you were running a program on two different desktop computers, you can say that the faster one is the desktop computer that gets the job done first. If you were running a datacenter have several servers (server can be understood as a computer) running jobs submitted by many users, you can say that the faster computer was the one that completed the most jobs during a day. As an individual computer user, you are interested in reducing **response time** (the time between the start and completion of a task, or *execution time*). On the other hand,  datacenter managers are often interested in increasing **throughput** (somewhere called *bandwidth*, the total amount of work done in a given time, in physics we called frequency but we changed the number of motions with the number of jobs). 
 
 
 
-#### Time 
+### Time 
 
 > Time is the measure of computer performance: the computer that performs the same amount of work in the least time is the fastest.
 
@@ -22,9 +20,7 @@ In **elapsed time**, we have a smaller time which is **CPU time** (or *CPU execu
 
 
 
-
-
-#### Improve performance
+### Improve performance
 
 We can improve performance by improve response time ($t_{resp}$) or throughput 
 
@@ -36,7 +32,7 @@ Another case, we can add more CPUs. In this case, throughput improved because in
 
 
 
-#### Key term
+### Key term
 
 - Response time (execution time): The total time required for the computer to complete a task, including disk accesses, memory accesses, I/O activities, operating system overhead, CPU execution time, and so on.
 - Throughput (bandwidth): Another measure of performance, it is the number of tasks completed per unit time.
@@ -44,7 +40,7 @@ Another case, we can add more CPUs. In this case, throughput improved because in
 
 
 
-### CPU Clocking
+## CPU Clocking
 
 As mentioned above, computer users we need to care about time ($t_{resp}$) but we need new unit convenient to think about performance in other metrics. Almost all computers are constructed using a clock that determines when events take place in the hardware. These discrete time intervals are called **clock cycles** (or *ticks, clock ticks, clock periods, clocks, cycles*). (Designers refer to the length of a clock period both as the time for **a complete clock cycle** (e.g., 250$ps$) and as **the clock rate** (e.g., 4 $GHz$), which is the inverse of the clock period)
 
@@ -59,7 +55,7 @@ As mentioned above, computer users we need to care about time ($t_{resp}$) but w
 
 
 
-### CPU Time
+## CPU Time
 
 Users and designers often examine performance using different metrics. If we could relate these different metrics, we could determine the effect of a design change on the performance as experienced by the user (Above we said users only need to focus to time response). Since we are confining ourselves to CPU performance at this point, the bottom-line performance measure is CPU execution time. So, we have simple formula relates the most basic metrics (clock cycles and clock cycle time) to CPU time:
 
@@ -74,7 +70,7 @@ $$
 
 *Note*: Above formula makes it clear that the hardware designer can improve performance by reducing the number of **clock cycles** required for a program or the length of the clock cycle
 
-### Instruction count and CPI
+## Instruction count and CPI
 
 As we all know, each program comes with a multiple command (Actually, from your code, compiler generated **instructions** to execute, and the computer - CPU, just only know how to run **instructions**, so CPU execution time equal to the sum of time run per instruction) so CPU excution time depends on the number of **instructions**. But, in CPU execution time's formula above did not include any reference to the number of instructions needed for the program. So, one way to think about execution time is that it equals the number of instructions executed multiplied by the average time per instruction. Therefore, the number of clock cycles required for a program can be written as
 $$
@@ -115,7 +111,7 @@ $$
 
 
 
-### Iron Law
+## Iron Law
 
 In Iron Law we have,
 $$
@@ -132,9 +128,9 @@ $$
 
 
 
-### Other metrics
+## Other metrics
 
-#### MIPS (Million Instructions Per Second)
+### MIPS (Million Instructions Per Second)
 
 $$
 \text{MIPS} = \frac{\text{instruction count}}{\text{execution time} \times 10^6} = \frac{\text{clock rate}}{\text{CPI} \times 10^6}
@@ -142,7 +138,7 @@ $$
 
 
 
-#### MFLOPS (Million Floating Point Operations Per Second)
+### MFLOPS (Million Floating Point Operations Per Second)
 
 $$
 \text{MFLOPS} = \frac{\text{Floating point operations (FP ops) in program}}{\text{execution time} \times 10^6}
@@ -155,14 +151,16 @@ Assuming FP ops independent of compiler and ISA, so
 
 
 
-#### Problems with MIPS
+### Problems with MIPS
 
 - Ignores program
 - Usually used to quote peak performance with ideal conditions and **guaranteed not to exceed** 
 
 We should use MIPS when same compiler, same ISA
 
-### Amdahl's Law
+
+
+## Amdahl's Law
 
 > A rule stating that the performance enhancement possible with a given improvement is limited by the amount that the improved feature is used. It is a quantitative version of the law of diminishing returns.
 
@@ -184,7 +182,7 @@ $$
 $$
 
 
-### Power
+## Power
 
 In CMOS IC technology
 $$

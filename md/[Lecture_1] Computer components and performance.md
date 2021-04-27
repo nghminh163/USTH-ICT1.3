@@ -1,6 +1,6 @@
 # Computer components and performance
 
-## Response time and throughpu
+## Response time and throughput
 
 If you were running a program on two different desktop computers, you can say that the faster one is the desktop computer that gets the job done first. If you were running a datacenter have several servers (server can be understood as a computer) running jobs submitted by many users, you can say that the faster computer was the one that completed the most jobs during a day. As an individual computer user, you are interested in reducing **response time** (the time between the start and completion of a task, or *execution time*). On the other hand,  datacenter managers are often interested in increasing **throughput** (somewhere called *bandwidth*, the total amount of work done in a given time, in physics we called frequency but we changed the number of motions with the number of jobs). 
 
@@ -72,11 +72,11 @@ $$
 
 ## Instruction count and CPI
 
-As we all know, each program comes with a multiple command (Actually, from your code, compiler generated **instructions** to execute, and the computer - CPU, just only know how to run **instructions**, so CPU execution time equal to the sum of time run per instruction) so CPU excution time depends on the number of **instructions**. But, in CPU execution time's formula above did not include any reference to the number of instructions needed for the program. So, one way to think about execution time is that it equals the number of instructions executed multiplied by the average time per instruction. Therefore, the number of clock cycles required for a program can be written as
+As we all know, each program comes with a multiple command (Actually, from your code, compiler generated **instructions** to execute, and the computer - CPU, just only know how to run **instructions**, so CPU execution time equal to the sum of time run per instruction) so CPU execution time depends on the number of **instructions**. But, in CPU execution time's formula above did not include any reference to the number of instructions needed for the program. So, one way to think about execution time is that it equals the number of instructions executed multiplied by the average time per instruction. Therefore, the number of clock cycles required for a program can be written as
 $$
 \text{CPU clock cycles} =  \text{Instructions for a program} \times \text{Average clock cycles per instruction}
 $$
-We have new term - **clock cycles per instruction** (abbreviated as **CPI**), which is the average number of clock cycles each instruction takes to execute. Since different instructions may *take different amounts of time depending on what they do*, CPI is an average of all the instructions executed in the program. CPI provides one way of comparing two different implementations of the same instruction set architecture, since the number of instructions executed for a program will, of course, be the same. (Like use same language but different algorithm)
+We have new term - **clock cycles per instruction** (abbreviated as **CPI**), which is **the average number of clock cycles each instruction takes to execute**. Since different instructions may *take different amounts of time depending on what they do*, CPI is an average of all the instructions executed in the program. CPI provides one way of comparing two different implementations of the same instruction set architecture, since the number of instructions executed for a program will, of course, be the same. (Like use same language but different algorithm)
 
 Hence, we can rewrite formula of basic performance equation in terms of instruction count (the number of instructions executed by the program), CPI, and clock cycle time like that
 $$
@@ -188,6 +188,8 @@ In CMOS IC technology
 $$
 \text{Power} = \text{Capacitive load} \times \text{Voltage}^2 \times \text{Frequency}
 $$
+
+
 
 
 
